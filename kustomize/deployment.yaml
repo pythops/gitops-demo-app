@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-demo-app
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: gitops-demo-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gitops-demo-app
+    spec:
+      containers:
+        - name: app
+          image: pythops/gitops:latest # {"$imagepolicy": "flux-system:image-repo-policy"}
+          ports:
+            - containerPort: 5000
