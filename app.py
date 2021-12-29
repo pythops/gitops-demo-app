@@ -5,4 +5,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return jsonify({"version": "v1"})
+    return jsonify({"version": "v2"})
