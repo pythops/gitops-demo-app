@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: app
-          image: pythops/gitops:latest # {"$imagepolicy": "flux-system:image-repo-policy"}
+          image: pythops/gitops:master-a4118103-1640788899 # {"$imagepolicy": "flux-system:image-repo-policy"}
           ports:
             - containerPort: 5000
